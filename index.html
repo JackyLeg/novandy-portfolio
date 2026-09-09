@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novandy Asardi</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#top" class="logo">Novandy Asardi</a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-text reveal">
+      <p class="hero-eyebrow">Hi, I'm Novandy Asardi.</p>
+      <h1>Informatics Student &amp; Aspiring Developer</h1>
+      <p class="hero-sub">
+        Currently exploring web development, cybersecurity, IoT, and other
+        areas of software development.
+      </p>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+
+    <div class="hero-photo reveal">
+      <div class="photo-frame">
+        <span>Photo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="section-inner reveal">
+      <h2>About Me</h2>
+
+      <p>
+        I'm Novandy Asardi, an Informatics student who enjoys learning about
+        technology and building small projects.
+      </p>
+      <p>
+        I'm currently exploring different areas of software development,
+        including web development, cybersecurity, IoT, and game development.
+      </p>
+      <p>
+        I'm still learning, so most of the projects here are experiments and
+        things I've built while studying.
+      </p>
+
+      <div class="learning-box">
+        <h3>Currently learning</h3>
+        <ul>
+          <li>HTML / CSS / JavaScript</li>
+          <li>Cybersecurity</li>
+          <li>IoT</li>
+          <li>Backend Development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" id="portfolio">
+    <div class="section-inner reveal">
+      <h2>My Projects</h2>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+
+      <div class="project-grid">
+
+        <div class="project-card" data-category="ai">
+          <div class="project-image">VirtuCart</div>
+          <div class="project-body">
+            <h3>VirtuCart</h3>
+            <p>An e-commerce chatbot prototype built using Rasa Open Source.</p>
+            <div class="tags">
+              <span>HTML</span><span>Rasa</span><span>Python</span>
+            </div>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <div class="project-image">Bali Marketplace</div>
+          <div class="project-body">
+            <h3>Bali Marketplace</h3>
+            <p>A tourism marketplace concept built with HTML, CSS, and JavaScript.</p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="other">
+          <div class="project-image">Terraria Server</div>
+          <div class="project-body">
+            <h3>Terraria / tModLoader Server</h3>
+            <p>A self-hosted modded Terraria server set up and maintained for friends.</p>
+            <div class="tags">
+              <span>Networking</span><span>Server Admin</span>
+            </div>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-inner reveal">
+      <h2>Get In Touch</h2>
+      <p>Have a question or want to talk about a project?</p>
+
+      <a class="btn" href="mailto:novandy@example.com">Send me an email</a>
+
+      <div class="contact-links">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:novandy@example.com">novandy@example.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Novandy Asardi</p>
+    <p>Built with HTML, CSS &amp; JavaScript.</p>
+    <div class="footer-links">
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+      <a href="mailto:novandy@example.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
