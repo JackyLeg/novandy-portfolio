@@ -54,8 +54,8 @@ filterButtons.forEach((button) => {
     const filter = button.dataset.filter;
 
     projectCards.forEach((card) => {
-      const category = card.dataset.category;
-      const show = filter === "all" || filter === category;
+      const categories = card.dataset.category ? card.dataset.category.split(" ") : [];
+      const show = filter === "all" || categories.includes(filter);
       card.style.display = show ? "flex" : "none";
     });
   });

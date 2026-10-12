@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Novandy Asardi</title>
+  <title>Novandy Asardi | Portfolio &amp; Homelab</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,6 +15,7 @@
 
       <nav class="nav-links" id="nav-links">
         <a href="#about">About</a>
+        <a href="#homelab">Homelab</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -31,10 +32,13 @@
       <p class="hero-eyebrow">Hi, I'm Novandy Asardi.</p>
       <h1>Informatics Student &amp; Aspiring Developer</h1>
       <p class="hero-sub">
-        Currently exploring web development, cybersecurity, IoT, and other
-        areas of software development.
+        Currently exploring web development, cybersecurity, homelab infrastructure,
+        IoT, and AI systems.
       </p>
-      <a href="#portfolio" class="btn">View My Work</a>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn">View My Work</a>
+        <a href="#homelab" class="btn btn-outline">Explore Homelab</a>
+      </div>
     </div>
 
     <div class="hero-photo reveal">
@@ -50,26 +54,141 @@
       <h2>About Me</h2>
 
       <p>
-        I'm Novandy Asardi, an Informatics student who enjoys learning about
-        technology and building small projects.
+        I'm Novandy Asardi, an Informatics student passionate about building practical software, 
+        managing self-hosted infrastructure, and exploring modern computer systems.
       </p>
       <p>
-        I'm currently exploring different areas of software development,
-        including web development, cybersecurity, IoT, and game development.
+        My interests span across software development, cybersecurity, network architecture, 
+        and IoT. Alongside coding applications, I maintain a 24/7 personal homelab server running 
+        containerized microservices, local AI inference, and secure Zero-Trust networking.
       </p>
       <p>
-        I'm still learning, so most of the projects here are experiments and
-        things I've built while studying.
+        I enjoy hands-on experimentation—whether it's writing web applications, deploying automated 
+        workflows, or hardening server environments.
       </p>
 
-      <div class="learning-box">
-        <h3>Currently learning</h3>
-        <ul>
-          <li>HTML / CSS / JavaScript</li>
-          <li>Cybersecurity</li>
-          <li>IoT</li>
-          <li>Backend Development</li>
-        </ul>
+      <div class="skills-section">
+        <h3>Technical Skills &amp; Stack</h3>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>Systems &amp; DevOps</h4>
+            <ul>
+              <li>Ubuntu Server &amp; Linux CLI</li>
+              <li>Docker &amp; Portainer</li>
+              <li>CasaOS Management</li>
+              <li>Bash Scripting</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Networking &amp; Security</h4>
+            <ul>
+              <li>Tailscale (WireGuard Mesh VPN)</li>
+              <li>Cloudflare Tunnels (Zero-Trust)</li>
+              <li>AdGuard Home (DNS Security)</li>
+              <li>Nginx Reverse Proxy &amp; Gateways</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Self-Hosted &amp; Cloud</h4>
+            <ul>
+              <li>Ollama &amp; Open-WebUI (Local AI)</li>
+              <li>n8n (Workflow Automation)</li>
+              <li>Home Assistant (IoT Automation)</li>
+              <li>Immich &amp; Vaultwarden</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h4>Development</h4>
+            <ul>
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>Python &amp; Rasa Open Source</li>
+              <li>Git &amp; GitHub Version Control</li>
+              <li>REST APIs &amp; Webhooks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Homelab Showcase -->
+  <section class="section" id="homelab">
+    <div class="section-inner reveal">
+      <div class="section-header">
+        <div class="status-badge"><span class="status-dot"></span> Live 24/7 Private Homelab</div>
+        <h2>Homelab &amp; Private Cloud Infrastructure</h2>
+      </div>
+
+      <p>
+        A self-hosted home server powered by <strong>Ubuntu Server</strong> and <strong>CasaOS</strong>, 
+        orchestrating 15+ containerized microservices. Built with a focus on data privacy, 
+        Zero-Trust remote connectivity, and local AI experimentation without relying on third-party cloud subscriptions.
+      </p>
+
+      <!-- Architecture Flow Highlight -->
+      <div class="arch-box">
+        <h3>Network &amp; Security Architecture</h3>
+        <p class="arch-desc">
+          Zero open router ports. Inbound traffic is strictly divided into two secure planes:
+        </p>
+        <div class="arch-cards">
+          <div class="arch-card">
+            <span class="arch-tag">Private Administration Plane</span>
+            <h4>Tailscale Mesh VPN</h4>
+            <p>Peer-to-peer encrypted WireGuard tunnel allowing full, authenticated management access (CasaOS, Portainer, SSH, Vaultwarden) from any authorized device anywhere.</p>
+          </div>
+          <div class="arch-card">
+            <span class="arch-tag">Edge Ingress Plane</span>
+            <h4>Cloudflare Tunnel</h4>
+            <p>Outbound-only daemon that proxies public web applications through Cloudflare's edge with automated SSL and DDoS mitigation, completely bypassing CGNAT without exposing my home IP.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Hosted Breakdown -->
+      <h3 class="subsection-title">Hosted Services Ecosystem</h3>
+      <div class="homelab-grid">
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <h4>Local AI &amp; Automation</h4>
+          <p class="service-apps"><strong>Ollama (CPU)</strong>, <strong>Open-WebUI</strong>, <strong>n8n</strong></p>
+          <p class="service-desc">Private LLM inference running locally with a ChatGPT-style UI, connected to automated n8n webhooks and pipelines.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h4>Security &amp; Network Defense</h4>
+          <p class="service-apps"><strong>AdGuard Home</strong>, <strong>Vaultwarden</strong>, <strong>website-gw</strong></p>
+          <p class="service-desc">Network-wide DNS sinkhole blocking tracking and ads; self-hosted end-to-end encrypted password and credential vault.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📸</div>
+          <h4>Data Privacy &amp; Workspace</h4>
+          <p class="service-apps"><strong>Immich</strong>, <strong>AFFiNE</strong>, <strong>Linkwarden</strong></p>
+          <p class="service-desc">High-performance photo backup with machine learning face clustering; private digital workspace and web archiving.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h4>IoT &amp; Entertainment</h4>
+          <p class="service-apps"><strong>Home Assistant</strong>, <strong>Jellyfin</strong>, <strong>Navidrome</strong>, <strong>RomM</strong></p>
+          <p class="service-desc">Central smart home hub orchestrating IoT devices; private media and audio streaming server; retro ROM management.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎮</div>
+          <h4>Dedicated Game Servers</h4>
+          <p class="service-apps"><strong>Crafty Controller</strong>, <strong>tModLoader</strong>, <strong>playit</strong></p>
+          <p class="service-desc">Multi-tenant Minecraft management panel and modded Terraria servers with low-latency tunnel routing.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h4>Management &amp; Orchestration</h4>
+          <p class="service-apps"><strong>Portainer</strong>, <strong>CasaOS</strong>, <strong>Docker</strong></p>
+          <p class="service-desc">Docker container lifecycle management, resource monitoring (CPU, RAM, storage), and automated volume backups.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -81,12 +200,31 @@
 
       <div class="filters" id="filters">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="infra">Homelab &amp; DevOps</button>
         <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="web">Web</button>
         <button class="filter-btn" data-filter="other">Other</button>
       </div>
 
       <div class="project-grid">
+
+        <div class="project-card" data-category="infra">
+          <div class="project-image">
+            <span class="card-status-badge">Active Server</span>
+            Private Homelab &amp; Cloud
+          </div>
+          <div class="project-body">
+            <h3>Ubuntu Homelab &amp; Zero-Trust Cloud</h3>
+            <p>
+              A 24/7 personal cloud infrastructure hosting 15+ containerized microservices 
+              with Zero-Trust networking via Tailscale and Cloudflare Tunnels.
+            </p>
+            <div class="tags">
+              <span>Ubuntu Server</span><span>Docker</span><span>Tailscale</span><span>Cloudflare</span><span>Ollama</span><span>n8n</span>
+            </div>
+            <a href="#homelab" class="project-link">View Infrastructure Details &rarr;</a>
+          </div>
+        </div>
 
         <div class="project-card" data-category="ai">
           <div class="project-image">VirtuCart</div>
@@ -96,7 +234,7 @@
             <div class="tags">
               <span>HTML</span><span>Rasa</span><span>Python</span>
             </div>
-            <a href="#" class="project-link">GitHub</a>
+            <a href="https://github.com/JackyLeg" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &rarr;</a>
           </div>
         </div>
 
@@ -108,19 +246,19 @@
             <div class="tags">
               <span>HTML</span><span>CSS</span><span>JavaScript</span>
             </div>
-            <a href="#" class="project-link">GitHub</a>
+            <a href="https://github.com/JackyLeg" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &rarr;</a>
           </div>
         </div>
 
-        <div class="project-card" data-category="other">
+        <div class="project-card" data-category="infra other">
           <div class="project-image">Terraria Server</div>
           <div class="project-body">
             <h3>Terraria / tModLoader Server</h3>
-            <p>A self-hosted modded Terraria server set up and maintained for friends.</p>
+            <p>A self-hosted modded Terraria game server configured with automated backups and tunnel networking.</p>
             <div class="tags">
-              <span>Networking</span><span>Server Admin</span>
+              <span>Networking</span><span>Server Admin</span><span>Linux</span>
             </div>
-            <a href="#" class="project-link">GitHub</a>
+            <a href="https://github.com/JackyLeg" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &rarr;</a>
           </div>
         </div>
 
@@ -132,14 +270,13 @@
   <section class="section" id="contact">
     <div class="section-inner reveal">
       <h2>Get In Touch</h2>
-      <p>Have a question or want to talk about a project?</p>
+      <p>Have a question, feedback, or want to talk about software or homelab setups?</p>
 
-      <a class="btn" href="mailto:novandy@example.com">Send me an email</a>
+      <a class="btn" href="mailto:imade.novandy23@gmail.com">Send me an email</a>
 
       <div class="contact-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="mailto:novandy@example.com">novandy@example.com</a>
+        <a href="https://github.com/JackyLeg" target="_blank" rel="noopener noreferrer">GitHub (JackyLeg)</a>
+        <a href="mailto:imade.novandy23@gmail.com">imade.novandy23@gmail.com</a>
       </div>
     </div>
   </section>
@@ -147,11 +284,10 @@
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; <span id="year"></span> Novandy Asardi</p>
-    <p>Built with HTML, CSS &amp; JavaScript.</p>
+    <p>Built with HTML, CSS &amp; JavaScript. Self-hosted &amp; maintained.</p>
     <div class="footer-links">
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
-      <a href="mailto:novandy@example.com">Email</a>
+      <a href="https://github.com/JackyLeg" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:imade.novandy23@gmail.com">Email</a>
     </div>
   </footer>
 
